@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Strict//EN" " HYPERLINK "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+	<head>
+	<title>{% block title %}{% endblock %}LUD Issues</title>
+	<link rel="stylesheet" href="{{ MEDIA_URL }}style.css" type="text/css" media="screen"/>
+</head>
+<body>
+	<div id="hd">
+		<h1>LUD Issue Tracker</span></h1>
+	</div>
+	<div id="mn">
+		<ul><li><a href="{% url issue-list %}" class="sel">view Issues</a></li>
+<li><a href="/admin/">Admin Site</a></li>
+		</ul>
+	</div>
+	<div id="bd">
+		{% block content %}{% endblock %}
+	</div>
+</body>
+</html>

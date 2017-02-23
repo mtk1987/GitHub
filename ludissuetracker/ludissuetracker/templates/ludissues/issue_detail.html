@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Issue #{{ object.id }} - {% endblock %}
+{% block content %}
+<h2>Issue #{{ object.id }}
+<span>{{ object.status }}</span></h2>
+<div class="issue">
+	<h2>Information</h2>
+<div class="date">
+	<p class="up">Last modified {{ object.modified_on }} ago</p>
+</div>
+	<div class="clear">&nbsp;</div>
+			<div class='block w49 right">
+			<p class="ass title">Owner</p>
+			<p class="ass">{{ object.owner }}</p>
+			</div>
+			<div class="clear">&nbsp;</div>
+	<div class="block">
+			<p class="des title">Summary</p>
+			<p class="des">{{ object.summary }}</p>
+			</div>
+</div>
+{% endblock %}

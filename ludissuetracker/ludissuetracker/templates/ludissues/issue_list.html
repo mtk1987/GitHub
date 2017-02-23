@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}View Issues
+{% endblock %}
+{% block content %}
+<table cellspacing="0" class="column-options">
+	<tr>
+	<th>Issue</th>
+	<th>Description</th>
+	<th>Status</th>
+	<th>Owner</th>
+	</tr>
+	{% for issue in object_list %}
+	<tr>
+	<td><a href="{% url issue-detail issue.id %}">{{ issue.id }}</a></td>
+	<td><a href="{% url issue-detail issue.id %}">{{ issue.name }}</a></td>
+	<td>{{ issue.status }}</td>
+	<td>{{ issue.owner }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}
